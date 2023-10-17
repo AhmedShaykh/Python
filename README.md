@@ -1,1 +1,1 @@
-# Learning Python With Type Strict!
+# Learning Python With Static Types!
