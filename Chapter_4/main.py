@@ -27,3 +27,23 @@ for name in names:
     break;
 
 print("Ahmed Shaykh");
+
+print([i**2 for i in range(1,11)]);
+
+letters: Tuple[str] = ("A","B","C");
+
+print(letters[0]);
+
+data: tuple[str, int, float] = ("Ahmed", 56, 7.8);
+
+print(data);
+
+from typing import Any;
+
+data: tuple[Any] = ("A",[1,2,3], True);
+
+print(data[1]);
+
+data[1].append(20);
+
+print(data);
