@@ -84,3 +84,127 @@ print(Teacher.counter);
 obj1.details();
 
 print(id(obj2));
+
+# ================== Inheritance ================== #
+
+class Parents():
+
+    def __init__(self) -> None:
+
+        self.eyeColor : str = "Brown";
+
+        self.hairColor : str = "Black";
+
+    def speak(self, words: str) -> None:
+
+        print(f"Parent Method Speak: {words}");
+
+    def watching(sef, objectName : str) -> None:
+
+        print(f"You Are Looking {objectName}");
+
+class Child(Parents):
+
+    pass;
+
+obj1 : Parents = Parents();
+
+print(obj1.eyeColor);
+
+print(obj1.hairColor);
+
+obj1.speak("Pakistan Zindabad");
+
+obj1.watching("TV \n");
+
+obj2 : Child = Child();
+
+obj2.speak("Free Palestine");
+
+obj2.watching("Youtube");
+
+print(obj2.eyeColor);
+
+print(obj2.hairColor);
+
+class Parents():
+
+    def __init__(self) -> None:
+
+        self.eyeColor : str = "Brown";
+
+        self.hairColor : str = "Black";
+
+    def speak(self, words: str) -> None:
+
+        print(f"Parent Method Speak: {words}");
+
+    def watching(sef, objectName : str) -> None:
+
+        print(f"You Are Looking {objectName}");
+
+class Child(Parents):
+
+    def music(self, genre : str) -> None:
+
+        print(f"I Love {genre}");
+
+obj1 : Parents = Parents();
+
+print(obj1.eyeColor);
+
+print(obj1.hairColor);
+
+obj1.speak("Pakistan Zindabad");
+
+obj1.watching("TV \n");
+
+obj2 : Child = Child();
+
+obj2.speak("Free Palestine");
+
+obj2.watching("Youtube");
+
+print(obj2.eyeColor);
+
+print(obj2.hairColor);
+
+obj2.music("EDM");
+
+from typing import List;
+
+class Employee():
+
+    def __init__(self, name : str) -> None:
+
+        self.name : str = name;
+
+class Designer(Employee):
+    
+    def __init__(self, title : str, name: str) -> None:
+
+        super().__init__(name);
+
+        self.title : str = title;
+
+class Developer(Employee):
+
+    def __init__(self, title : str, name: str) -> None:
+
+        super().__init__(name);
+
+        self.title: str = title;
+        
+        self.programming_skills : List[str] = ["JavaScript", "TypeScript", "Python"];
+
+design: Designer = Designer("Animation Artist", "Ahsan");
+
+dev: Developer = Developer("Gen AI Engineer", "Ahmed");
+
+print(design.name);
+
+print(design.title);
+
+print(dev.title);
+
+print(dev.programming_skills);
