@@ -208,3 +208,243 @@ print(design.title);
 print(dev.title);
 
 print(dev.programming_skills);
+
+class Mother:
+
+    def __init__(self, name: str) -> None:
+
+        self.name : str = name;
+
+        self.eyeColor : str = "Blue";
+
+class Father:
+
+    def __init__(self, name: str) -> None:
+
+        self.name : str = name;
+
+        self.height : str = "7 Feet";
+
+class Child(Mother, Father):
+
+    def __init__(self, motherName: str, fatherName: str ,childName: str) -> None:
+
+        Mother.__init__(self, motherName);
+
+        Father.__init__(self, fatherName);
+
+        self.childName : str = childName;
+
+    def speaking(self, words: str) -> str:
+
+        return f"Imran Khan Speaking: {words}";
+
+imran : Child = Child("Shaukat Khanum", "Ikramullah Khan","Imran Khan");
+
+print(f"Imran Khan Height {imran.height}");
+
+print(f"Imran Khan Eye Color {imran.eyeColor}");
+
+print(imran.speaking("Absolutely Not"));
+
+print([i for i in dir(imran) if "__" not in i]);
+
+from typing import Union, overload;
+
+@overload #Overload
+def add(self, x: int, y: int) -> int:
+    ...
+
+@overload
+def add(self, x: float, y: float) -> float:
+    ...
+        
+@overload
+def add(self, x: str, y: str) -> str:
+    ...
+
+def add(x: Union[int, float, str], y: Union[int, float, str]) -> Union[int, float, str]:
+    if isinstance(x, int) and isinstance(y, int):
+        return x + y;
+    elif isinstance(x, float) and isinstance(y, float):
+        return x + y;
+    elif isinstance(x, str) and isinstance(y, str):
+        return x + y;
+    else:
+        raise TypeError("Invalid Argument Types!");
+
+result1 = add(1, 2);
+
+result2 = add(2.5, 2.5);
+
+result3 = add("Hello", " World!");
+
+print(result1);
+
+print(result2);
+
+print(result3);
+
+class Adder:
+
+    @overload
+    def add(self, x: int, y: int) -> int:
+        ...
+
+    @overload
+    def add(self, x: float, y: float) -> float:
+        ...
+        
+    @overload
+    def add(self, x: str, y: str) -> str:
+        ...
+
+    def add(self, x: Union[int, float, str], y: Union[int, float, str]) -> Union[int, float, str]:
+        if isinstance(x, int) and isinstance(y, int):
+            return x + y;
+        elif isinstance(x, float) and isinstance(y, float):
+            return x + y;
+        elif isinstance(x, str) and isinstance(y, str):
+            return x + y;
+        else:
+            raise TypeError("Invalid Argument Types!");
+
+adder: Adder = Adder();
+
+result1 = adder.add(2, 2);
+
+result2 = adder.add(2, 2);
+
+result3 = adder.add("Free", " Palestine!");
+
+print(result1);
+
+print(result2);
+
+print(result3);
+
+# ================== Polymorphism ================== #
+
+class Animal():
+
+    def eating(self, food: str ) -> None:
+
+        print(f"Animal Is Eating {food}");
+
+class Bird(Animal):
+
+    def eating(self, food: str) -> None:
+
+        print(f"Bird Is Eating {food}"); # OverRide
+
+bird : Bird = Bird();
+
+bird.eating("Bread");
+
+animal : Animal = Animal();
+
+animal.eating("Grain");
+
+print(type(animal));
+
+animal2 : Animal = Bird(); # Object Will Decide Which Object Method It Will Be Run
+
+animal2.eating("Seeds");
+
+print(type(animal2));
+
+bird2 : Bird = Animal(); # It's Called Polymorphism
+
+bird2.eating("Seeds");
+
+class Mother:
+
+    def __init__(self, name: str) -> None:
+
+        self.name : str = name;
+
+        self.eyeColor : str = "Blue";
+
+    def speaking(self, words: str) -> str:
+
+        return f"Imran Khan Mother Speaking: {words}";
+
+class Father:
+
+    def __init__(self, name: str) -> None:
+
+        self.name : str = name;
+
+        self.height : str = "7 Feet";
+
+    def speaking(self, words: str) -> str:
+
+        return f"Imran Khan Father Speaking: {words}";
+
+class Child(Father, Mother):
+
+    def __init__(self, motherName: str, fatherName: str ,childName: str) -> None:
+
+        Mother.__init__(self, motherName);
+
+        Father.__init__(self, fatherName);
+
+        self.childName : str = childName;
+
+imran : Child = Child("Shaukat Khanum", "Ikramullah Khan","Imran Khan");
+
+print(f"Imran Khan Height {imran.height}");
+
+print(f"Imran Khan Eye Color {imran.eyeColor}");
+
+print(imran.speaking("Pakistan Zindabad!"));
+
+class MathOperations:
+
+    organization : str = "PIAIC";
+
+    @staticmethod # Static Method
+    def add(x: int, y: int) -> int:
+
+        return x + y;
+
+    @staticmethod
+    def multiply(x: int, y: int) -> int:
+    
+        return x * y;
+
+resultAdd = MathOperations.add(10, 20); # In Static Method & Variable Direct Access To Variable & Method With Class Name
+
+resultMultiply = MathOperations.multiply(10, 20); # No Need Create The Object
+
+print("Addition:", resultAdd);
+
+print("Multiplication:", resultMultiply);
+
+print(MathOperations.organization);
+
+class Bilal():
+
+    def eating(self, food : str) -> None:
+
+        print(f"Bilal is Eating {food}");
+    
+obj1 : Bilal = Bilal();
+
+obj1.eating("Biryani");
+
+print(dir(obj1)); # Everything Is An Object In Python
+
+print(dir(object));
+
+class Ahmed(object):
+
+    def drinking(self, drink : str) -> None:
+
+        print(f"Human is Drinking {drink}");
+    
+obj2 : Ahmed = Ahmed();
+
+obj2.drinking("Tea");
+
+print(dir(obj2));
