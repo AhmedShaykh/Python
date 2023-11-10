@@ -582,3 +582,13 @@ factorialOf(4);
 factorialOf(10);
 
 print(factorialOf.cache);
+
+from package.pack import ExecutionTimer; # Module
+
+@ExecutionTimer
+
+def squareNumbers(numbers):
+
+    return [number ** 2 for number in numbers];
+
+print(squareNumbers(list(range(10))));
