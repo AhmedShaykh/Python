@@ -592,3 +592,101 @@ def squareNumbers(numbers):
     return [number ** 2 for number in numbers];
 
 print(squareNumbers(list(range(10))));
+
+class Piaic: # Access Modifiers
+
+      def __init__(self) -> None:
+
+        self.piaicHelpline : str = "123456789"; # Public
+
+        self._totalExpense : int = 6000000; # Protected
+
+        self.__testAnouncement : str = "5 Nov 2023"; # Private
+ 
+imran : Piaic = Piaic();
+
+print(imran.piaicHelpline);
+
+imran.piaicHelpline = "1234567890";
+
+print(imran.piaicHelpline);
+
+print(imran._Piaic__testAnouncement); # It's Not Pure Object Oriented
+
+print(imran._totalExpense); # It Python Side Problem Not My Code
+
+# ================== Encapsulation ================== #
+
+class StudentLogin():
+
+    def __init__(self) -> None:
+
+        self.__username : str = "Admin";
+
+        self.__password : str = "Admin";
+
+    def __dbConnectivity(self, user: str, passwrod: str) -> str:
+
+        print("Successfully Connected");
+    
+        if user == self.__username and passwrod == self.__password:
+
+            return "Valid User";
+    
+        else:
+
+            return "Invalid User";
+
+    def updatePassword(self, password: str) -> None:
+
+        self.__password = password; # Setter Method
+    
+        print("Password Updated!");
+
+    def login(self, user1: str , pass1: str):
+
+        message :str = self.__dbConnectivity(user1, pass1);
+    
+        print(message);
+
+    def displayInformation(self):
+
+        print(f"Hello Dear {self.__username} & Password {self.__password}"); # Getter Method
+
+ahmed : StudentLogin = StudentLogin();
+
+ahmed.displayInformation();
+
+ahmed.login("Admin", "Ahmed");
+
+ahmed.login("Admin", "Admin");
+
+ahmed.updatePassword("Admin1234");
+
+ahmed.displayInformation();
+
+ahmed.login("Admin", "Admin1234");
+
+class Teacher():
+
+    def __init__(self,name) -> None:
+
+        self.name : str = name;
+
+sir : Teacher = Teacher("Sir Zia");
+
+print(sir);
+
+class Teacher():
+
+    def __init__(self,name) -> None:
+
+        self.name : str = name;
+
+    def __str__(self) -> str: # __str __ Method
+
+        return f"Teacher Name Is: {self.name}";
+
+sir : Teacher = Teacher("Sir Zia");
+
+print(sir);
