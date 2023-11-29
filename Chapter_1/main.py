@@ -1,5 +1,3 @@
-print("Hello Python 3.12");
-
 message = "Learning Generative AI!";
 
 print(message);
