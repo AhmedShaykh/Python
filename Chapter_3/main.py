@@ -8,7 +8,7 @@ print(beros[0]);
 
 print(beros[2]);
 
-print(beros[1].upper());
+print(beros[-1].upper());
 
 message: str = f"{beros[1]} My Class Follow";
 
