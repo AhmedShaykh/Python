@@ -19,15 +19,15 @@ Key = Union[int, str];
 Value = Union[int, str, list, dict, tuple, set];
 
 data : Dict[Key, Value] = { 
-                              "fName": "Ahmed", 
-                              "mName": "Saleem", 
-                              "lName": "Shaikh",
-                              100: "Pakistan",
-                              "Array": [1, 2, 3],
-                              "Obj": {1, 2, 3},
-                              "Fun": (1, 2, 3),
-                              "Oop": {"A": 1, "B": 2}
-                         };
+                            "fName": "Ahmed", 
+                            "mName": "Saleem", 
+                            "lName": "Shaikh",
+                            100: "Pakistan",
+                            "Array": [1, 2, 3],
+                            "Obj": {1, 2, 3},
+                            "Fun": (1, 2, 3),
+                            "Oop": {"A": 1, "B": 2}
+                        };
 
 pprint.pprint(data);
 
@@ -77,14 +77,16 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 for value in data:
 
     pprint.pprint(value);
 
 print(data.keys()); # Keys
+
 print(data.values()); # Values
+
 print(data.items()); # All Items In Dictionary
 
 for val in data.keys():
@@ -102,6 +104,7 @@ pprint.pprint({ key:val for key,val in data.items() }); # Comprehension List
 pprint.pprint({ val:key for key,val in data.items() }); # Shuffle
 
 a : int = 7;
+
 b : int = 9;
 
 a, b = b, a; # Shuffle
@@ -116,7 +119,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 print(data);
 
@@ -128,7 +131,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 pprint.pprint(data);
 
@@ -142,7 +145,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 pprint.pprint(data);
 
@@ -156,7 +159,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 pprint.pprint(data);
 
@@ -170,7 +173,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 pprint.pprint(data);
 
@@ -193,13 +196,13 @@ data : Dict[str,str] = {
                         "mName": "Saleem", 
                         "lName": "Shaikh",
                         "Country": "Pakistan"
-                        };
+                    };
 
 data2 : Dict[Key, Value] = { 
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 data.update(data2);
 
@@ -235,7 +238,7 @@ data : Dict[str, list[Any]] = {
                                 "No": [1, 2, 3], 
                                 "Company": ["Apple", "SpaceX", "Google"],
                                 "Net Worth": ["$2.72 Trillion", "$150 Billion", "$1585.58 Billion"],
-                                };
+                            };
 
 result: pd.DataFrame = pd.DataFrame(data);
 
@@ -286,7 +289,7 @@ data : Dict[str,str] = {
                         "mName": "Saleem", 
                         "lName": "Shaikh",
                         "fName": "AHM X" # Key Is Always Unique Put In Multiple Same Value But It Support Last Value
-                        };
+                    };
 
 print(data);
 
@@ -389,7 +392,7 @@ data : Dict[Key, Value] = {
                             "Country": "Nertherlands",
                             "Message": "Free Palenstine",
                             "Learning Language":"Python"
-                            };
+                        };
 
 print(data);
 
