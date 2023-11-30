@@ -30,7 +30,7 @@ print("Learning Python 3.12");
 
 from typing import Union;
 
-per : Union[int, float] = int(input("Enter Your Percentage:"));
+per : Union[int, float] = float(input("Enter Your Percentage:"));
 
 grade :Union[str, None] = None;
 
@@ -161,7 +161,7 @@ for pizza in pizzas:
 
     if pizza in pizzaAvailable:
 
-        print(f"Adding {pizza}.");
+        print(f"Adding {pizza} Pizza.");
 
     else:
 
@@ -185,4 +185,8 @@ if userName and passwrod:
 
     else:
 
-        print("Invalid User Or Password Or OTP");
+        print("Incorrect Your OTP");
+
+else:
+
+    print("Invalid User Or Password");
