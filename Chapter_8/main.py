@@ -48,7 +48,7 @@ def myRange(start: int , end: int,step: int = 1):
 
     for i in range(start, end + 1, step):
 
-        yield i; # Identity
+        yield i; # Return Generator
 
 fun = myRange(1,10);
 
@@ -131,7 +131,6 @@ def myDecorator(func: Callable[[int], None])-> Callable[[], None]:
     return wrapper;
 
 @myDecorator
-
 def sayHello(num1: int):
 
     print(num1);
