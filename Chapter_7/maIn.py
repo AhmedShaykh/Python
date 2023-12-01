@@ -57,7 +57,7 @@ for i in range(1, 11):
 
 if True:
 
-    pass; # Escape The Block Logic Apply Go To Next Logic
+    pass; # Escape The Logic Go To Next Line
 
 print("Free Palestine");
 
@@ -89,7 +89,7 @@ while unConfirmedUsers:
 
     confirmedUsers.append(currentUser);
 
-print("\nThe following users have been confirmed:");
+print("\nThe Following Users Have Been Confirmed:");
 
 for confirmedUser in confirmedUsers:
 
