@@ -335,7 +335,7 @@ class Bird(Animal):
 
     def eating(self, food: str) -> None:
 
-        print(f"Bird Is Eating {food}"); # OverRide
+        print(f"Bird Is Eating {food}"); # OverWrite
 
 bird : Bird = Bird();
 
@@ -651,7 +651,7 @@ class StudentLogin():
 
     def displayInformation(self):
 
-        print(f"Hello Dear {self.__username} & Password {self.__password}"); # Getter Method
+        print(f"Hello Dear {self.__username}"); # Getter Method
 
 ahmed : StudentLogin = StudentLogin();
 
@@ -683,13 +683,13 @@ class Teacher():
 
         self.name : str = name;
 
-    def __str__(self) -> str: # __str __ Method
+    def __str__(self) -> str: # __Str__ Method
 
         return f"Teacher Name Is: {self.name}";
 
 sir : Teacher = Teacher("Sir Zia");
 
-print(sir); # Default Call __str __ Method
+print(sir); # Default Call __Str__ Method
 
 # ================== Abstraction ================== #
 
@@ -741,7 +741,7 @@ def inTheForest(malard):
 
     print(malard.quack());
 
-donald : Duck = Duck(); # In The Same Method Of Other Class Then Assign In Function
+donald : Duck = Duck();
 
 john : Person = Person();
 
