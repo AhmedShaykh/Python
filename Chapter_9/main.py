@@ -132,7 +132,7 @@ try:
 
     print(z);
 
-except (ZeroDivisionError):
+except ZeroDivisionError:
     
     print("Zero Division Error!");
 
@@ -142,7 +142,7 @@ except IndexError:
 
 except NameError:
 
-    print("Name Not Defined");
+    print("Value Not Defined");
 
 print("Logic 4");
 
@@ -164,7 +164,7 @@ try:
 
     open("app.py");
 
-except (ZeroDivisionError):
+except ZeroDivisionError:
     
     print("Zero Division Error!");
 
@@ -174,7 +174,7 @@ except IndexError:
 
 except NameError:
 
-    print("Name Not Defined");
+    print("Value Not Defined");
 
 except:
 
@@ -204,7 +204,7 @@ print(data.read());
 
 data.close(); # Close Connectivity
 
-with open("./app2.txt") as file:
+with open("./app2.txt") as file: # The With Method Automatically Close Your File After Done
 
     print(file.readline(), end=""); # Read Only One Line At A Time
 
@@ -224,9 +224,9 @@ with open("./app3.txt", "r+") as file:
 
     file.seek(0); # Add Particular Value In Cursor
 
-    print("After:",file.read()); # Then It Show Blank 
+    print("After:",file.read());
 
-with open("./app4.txt", "w") as file: # If File Exist Then It Overwrite The Text
+with open("./app4.txt", "w") as file: # If File Exist Then It OverWrite The Text
 
     file.write("Free "); # If File Not Exist Then It Will Create New File
 
@@ -236,11 +236,11 @@ with open("./app4.txt", "a") as file: # If File Not Exist Then It Will Create Ne
 
 with open("./app5.txt", "x") as file: # If File Not Exist Then It Will Create New File
 
-    file.write("Pakistan Zindabad"); # # If File Exist Then Return Thorw Error
+    file.write("Pakistan Zindabad"); # If File Exist Then Return Thorw Error
 
 with open("./app4.txt", "rb+") as file: # Read, Binary Mode & Plus Means (All)
 
-    print(file.read()); # Binary Format For Read Content
+    print(file.read()); 
 
 import pandas as pd;
 
