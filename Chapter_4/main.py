@@ -30,7 +30,7 @@ print("Ahmed Shaykh");
 
 print([i ** 2 for i in range(1,11)]);
 
-letters: Tuple[str, str, str] = ("A","B","C");
+letters: Tuple[str, ...] = ("A","B","C");
 
 print(letters[0]);
 

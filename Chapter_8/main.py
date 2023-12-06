@@ -38,7 +38,7 @@ print(data);
 
 data: List[int] = filter(lambda x: x % 2 == 0, range(1,101));
 
-print(next(data)); # Next Perform Single Iteration Code By Code
+print(next(data)); # Next Perform Single Iteration Line By Line
 
 print(next(data));
 
